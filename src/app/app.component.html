@@ -8,7 +8,7 @@
 
     <article class="textContainer">
       <article class="textItem">
-        <p class="bigHelp" data-text="fbigintro">Choose a location to show the weather information</p>
+        <p class="bigHelp">Choose a location to show the weather information</p>
       </article>
     </article>
 
@@ -18,7 +18,7 @@
         <button (click)="myLocation()">Use my location</button>
         <button (click)="setLocation(sabanaLocation)">Sabana, San José Province</button>
         <button (click)="setLocation(casonaSR)">Hacienda de Santa Rosa, Guanacaste Province</button>
-        <button (click)="setLocation(laroca)">La Roca Lookout</button>
+        <button (click)="setLocation(laroca)">La Roca Lookout, Puntarenas</button>
       </article>
 
     </article>
@@ -35,10 +35,10 @@
         <div class="cardHeader">
           <div class="titulo">{{datosCapture.sys.country}} - {{datosCapture.name}}</div>
           <div class="subtitulo">
-            <div>
-              Latitude: <span class="lat">{{datosCapture.coord.lat}}</span>
+            <div class="block">
+              Latitude: <span class="lat">{{datosCapture.coord.lat}}</span>&nbsp;&nbsp;
             </div>
-            <div>
+            <div class="block">
               Longitude: <span class="long">{{datosCapture.coord.lon}}</span>
             </div>
           </div>
@@ -74,7 +74,8 @@
       <article class="mostrarFooter">
         <button (click)="copyLocation()">Copy location</button>
         <button (click)="openMaps()">Location on Google Maps</button>
-        <p class="notaPie" data-text="fmostrardata">Data provided by OpenWeatherMap</p>
+        <button (click)="datosCapture=false">Try another location</button>
+        <p class="notaPie">Data provided by OpenWeatherMap</p>
       </article>
 
     </section>

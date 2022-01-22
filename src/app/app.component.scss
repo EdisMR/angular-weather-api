@@ -1,7 +1,7 @@
 .block {
   display: block;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .solicitar {
@@ -10,7 +10,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 20px 20px;
-  margin: 25px
+  margin: 25px;
 }
 
 @media screen and (max-width: 600px) {
@@ -18,49 +18,50 @@
     margin: 5px;
     margin-top: 25px;
     grid-gap: initial;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 }
 
 .textContainer {
-  padding: 10px
+  padding: 10px;
 }
 
 .bigHelp {
-  font-size: 35px
+  font-size: 35px;
+  padding:20px;
 }
 
 @media screen and (max-width: 600px) {
   .bigHelp {
     font-size: 30px;
-    margin: 2px
+    margin: 2px;
   }
 }
 
 .notaPie {
-  font-size: 10px
+  font-size: 10px;
 }
 
 .formContainer {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {
   .formContainer {
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }
 
 .formItem {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .textInput {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .inputContainer {
@@ -69,7 +70,7 @@
 
   input {
     border: 2px solid rgba(10, 10, 10, .3);
-    padding: 5px
+    padding: 5px;
   }
 }
 
@@ -166,6 +167,18 @@
 .mostrarFooter button {
   font-size: 12px;
   padding: 5px;
+  transition-duration: .2s;
+  background-color:var(--secondary);
+  color:var(--secondaryColor);
+  border-color:#ccc;
+  margin-right: 10px;
+  margin-top: 10px;
+  &:hover{
+    background-color:var(--secondaryHover);
+  }
+  &:active{
+    background-color:var(--secondaryActive);
+  }
 }
 
 .cardHeader {
