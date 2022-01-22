@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+  :root {
+    --coordenadasTexto: rgb(0, 174, 255);
+
+    --primary:rgb(94, 149, 221);
+    --primaryColor:#eee;
+
+    --secondary:#4ba19f;
+    --secondaryColor:#eee;
+
+    --secondaryHover:#67c5c4;
+    --secondaryActive:#368a88;
+}
+
+html{
+  background-color: #333;
+  color: #eee;
+  user-select: none;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body{
+  margin: 0;
+
+}

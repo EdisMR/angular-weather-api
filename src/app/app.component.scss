@@ -1,0 +1,290 @@
+.block {
+  display: block;
+  margin: 0;
+  padding: 0
+}
+
+.solicitar {
+  border: 2px solid rgba(100, 100, 100, .5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 25px
+}
+
+@media screen and (max-width: 600px) {
+  .solicitar {
+    margin: 5px;
+    margin-top: 25px;
+    grid-gap: initial;
+    grid-template-columns: 1fr
+  }
+}
+
+.textContainer {
+  padding: 10px
+}
+
+.bigHelp {
+  font-size: 35px
+}
+
+@media screen and (max-width: 600px) {
+  .bigHelp {
+    font-size: 30px;
+    margin: 2px
+  }
+}
+
+.notaPie {
+  font-size: 10px
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    margin-bottom: 20px
+  }
+}
+
+.formItem {
+  margin: 0;
+  padding: 0
+}
+
+.textInput {
+  margin: 0;
+  padding: 0
+}
+
+.inputContainer {
+  margin: 0;
+  padding: 0;
+
+  input {
+    border: 2px solid rgba(10, 10, 10, .3);
+    padding: 5px
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn:first-child {
+  margin-right: 5px;
+}
+
+.btn:last-child {
+  margin-left: 5px;
+}
+
+.btn button {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.btn button span {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.textItem {
+  button {
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 6px;
+    padding: 10px 20px;
+    text-align: left;
+    transition-duration: .2s;
+    background-color: var(--secondary);
+    color: var(--secondaryColor);
+    &:hover{
+      background-color: var(--secondaryHover);
+    }
+    &:active{
+      background-color: var(--secondaryActive);
+    }
+  }
+}
+
+.btnSendHelper {
+  font-size: .9rem;
+  opacity: .8;
+}
+
+.btnSendHelper span {
+  color: var(--coordenadasTexto);
+  background-color: rgba(137, 43, 226, .096);
+  user-select: text;
+}
+
+.mostrar {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 25px;
+  padding: 10px;
+  border: 2px solid rgba(100, 100, 100, .5);
+  background-color: var(--secondary);
+  color: var(--secondaryColor);
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .mostrar {
+    margin: 5px;
+    margin-top: 25px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.mostrarFooter {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.mostrarFooter button {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.cardHeader {
+  margin-bottom: 10px;
+}
+
+.cardHeader .titulo {
+  font-size: 40px;
+}
+
+.cardHeader .subtitulo div {
+  display: inline-block;
+}
+
+.cardHeader .subtitulo .lat {
+  color: #6df5ff;
+}
+
+.cardHeader .subtitulo .long {
+  color: #6df5ff;
+}
+
+.itemImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .itemImg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.temperatureItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  color: #ffc55b;
+}
+
+.temp {
+  flex: none;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+}
+
+.tempMax,
+.tempMin {
+  flex: auto;
+  width: 4ch;
+  text-align: center;
+  padding: 10px;
+}
+
+.cardImg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-direction: column;
+
+  div {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
+.descrip {
+  display: block;
+  text-align: center;
+}
+
+#afterForm {
+  display: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+header,
+footer {
+  padding: 20px;
+  background-color: var(--primary);
+  color: var(--primaryColor);
+}
+
+
+header {
+  text-align: left;
+  margin-bottom: 25px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+main {
+  min-height: 70vh;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 5px;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+}
