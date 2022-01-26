@@ -12,14 +12,14 @@ export class RequestService {
     lon: string;
     units: string;
   } = {
-    apiKey: 'b96ba3199b2f0a04e4eaec52229ff2b1',
+    apiKey: 'Yjk2YmEzMTk5YjJmMGEwNGU0ZWFlYzUyMjI5ZmYyYjE=',
     lat: '',
     lon: '',
     units: 'metric',
   };
 
   defineUrlSolicitud():string {
-    return `https://api.openweathermap.org/data/2.5/weather?lat=${this.api.lat}&lon=${this.api.lon}&appid=${this.api.apiKey}&lang=en&units=${this.api.units}`;
+    return `https://api.openweathermap.org/data/2.5/weather?lat=${this.api.lat}&lon=${this.api.lon}&appid=${atob(this.api.apiKey)}&lang=en&units=${this.api.units}`;
   }
 
   getData():Promise<Weather>{
