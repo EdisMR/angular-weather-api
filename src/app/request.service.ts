@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http"
-import { Observable } from 'rxjs';
-
+import {Weather} from "./resultInterface"
 @Injectable({
   providedIn: 'root'
 })
@@ -24,8 +22,22 @@ export class RequestService {
     return `https://api.openweathermap.org/data/2.5/weather?lat=${this.api.lat}&lon=${this.api.lon}&appid=${this.api.apiKey}&lang=en&units=${this.api.units}`;
   }
 
-  getData():Observable<any[]>{
-    return this.http.get<any[]>(this.defineUrlSolicitud())
+  getData():Promise<Weather>{
+    let promise:Promise<Weather>=new Promise((resolve,reject)=>{
+
+      fetch(this.defineUrlSolicitud())
+      .then((e:any)=>{
+        return e.json()
+      })
+      .then((e)=>{
+        resolve(e)
+      })
+      .catch((e:any)=>{
+        reject("{}")
+      })
+
+    })
+    return promise
   }
 
   public setLatitude(value:string):void{
@@ -36,5 +48,5 @@ export class RequestService {
     this.api.lon=value
   }
 
-  constructor(private http:HttpClient) {}
+  constructor() {}
 }

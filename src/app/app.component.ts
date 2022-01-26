@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RequestService } from './request.service';
 import { location } from './interfaces';
-
+import { Weather } from './resultInterface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,7 +23,8 @@ export class AppComponent {
     this.RequestService.setLatitude(values.lat);
     this.RequestService.setLongitude(values.lon);
 
-    this.instancia = this.RequestService.getData().subscribe((result) => {
+    this.instancia = this.RequestService.getData()
+    .then((result:Weather) => {
       this.datosCapture = result;
     });
   }
